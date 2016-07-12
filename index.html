@@ -48,13 +48,9 @@
 <div ng-controller="MyCtrl as vm">
 <div class="container">
   
- <ng-map zoom="13" center="[37.576347, 13.215090]">
-      <marker ng-repeat="m in vm.marker"
-        position="{{m.Latitude}},{{m.Longitude}}"
-        data="{{data[$index]}}"
-        on-click="showData()";
-        title="{{m.Name}}"></marker>
-    </ng-map>	
+<ng-map zoom="13" center="[37.576347, 13.215090]">
+      <marker ng-repeat="m in vm.marker" position="{{m.Latitude}},{{m.Longitude}}" title="{{m.Name}}"  on-click="vm.showDetail(m)"></marker>  
+</ng-map>	
 </div>
 <div class="container">	
 <table class="table table-bordered table-striped">
@@ -72,7 +68,7 @@
     </thead>
     
     <tbody>
-      <tr ng-repeat="m in vm.marker | orderBy:'Name' ">
+      <tr ng-repeat="m in vm.marker | orderBy:'Name'">
 
 		<td>
 			{{m.Category}}
