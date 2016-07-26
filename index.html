@@ -53,7 +53,7 @@ angular.module('ngMap').controller('MyCtrl', function($scope,$http,NgMap) {
 <div ng-controller="MyCtrl as vm">
 <div class="container">
   
-  <ng-map default-style="false" zoom="10" center="37.576347, 13.215090" style="height: 600px;">
+  <ng-map default-style="false" zoom-to-include-markers="true" center="37.576347, 13.215090" style="height: 600px;">
 
     <info-window id="myInfoWindow" >
       <div ng-non-bindable>
