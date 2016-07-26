@@ -65,9 +65,8 @@ angular.module('ngMap').controller('MyCtrl', function($scope,$http,NgMap) {
       position="{{c.Latitude}},{{c.Longitude}}" title="{{c.Name}}"  id="{{c.ID}}"  on-click="showCity(event, c)"
       icon="{
         url:'icons/{{c.Category}}.png',
-        scaledSize:[50,50],
-        origin: [10,10],
-        anchor: [25,25]
+        scaledSize:[20,20],
+        anchor: [10,10]
       }"
       
       >
